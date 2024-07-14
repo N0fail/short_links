@@ -1,0 +1,18 @@
+[package]
+name = "short_links"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.38.0", features = ["full"] }
+redis = { version = "0.25.4", features = ["tokio-comp"] }
+http = { version = "1.1.0" }
+hyper = { version = "1.4.1", features = ["full"] }
+hyper-util = { version = "0.1.6", features = ["full"] }
+http-body-util = { version = "0.1.2" }
+rand = { version = "0.8.5" }
+rand_chacha = { version = "0.3.1" }
+regex = { version = "1.10.5" }
+lazy_static = { version = "1.5.0" }

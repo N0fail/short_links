@@ -1,0 +1,23 @@
+overload:
+  enabled: true
+  package: yandextank.plugins.DataUploader
+  token_file: "token.txt"
+phantom:
+  address: 127.0.0.1:3000
+  load_profile:
+    load_type: rps
+    schedule: line(10000, 40000, 1m)
+  instances: 12
+  header_http: "1.1"
+  headers:
+    - "[Host: www.target.example.com]"
+    - "[Connection: close]"
+  uris:
+    - "/5LQqey"
+    - "/asd"
+    - "/sdfg?sdf=rwerf"
+    - "/sdfbv/swdfvs/ssfsf"
+console:
+  enabled: true
+telegraf:
+  enabled: false
