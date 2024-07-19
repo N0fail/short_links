@@ -3,4 +3,4 @@ COPY src/ /app/src
 COPY Cargo.toml /app
 WORKDIR /app
 RUN cargo build --release
-ENTRYPOINT ./target/release/short_links
+ENTRYPOINT /app/target/release/short_links
