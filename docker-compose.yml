@@ -1,18 +1,21 @@
 services:
   redis:
     image: redis:7.4-rc2
-    ports:
-      - 6379:6379
+    restart: always
+    volumes:
+      - redis_data:/data
   app:
-    build: 
+    build:
       dockerfile: Dockerfile
+    volumes:
+      - .:/app:rw
     depends_on:
       - redis
-    volumes:
-      - type: bind
-        source: .
-        target: /app
+    links:
+      - redis
     ports:
       - 80:80
     working_dir: /app
 
+volumes:
+  redis_data:

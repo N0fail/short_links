@@ -121,7 +121,7 @@ fn full<T: Into<Bytes>>(chunk: T) -> BoxBody<Bytes, hyper::Error> {
 #[tokio::main]
 async fn main() {
     // Setup connection to Redis
-    let client = redis::Client::open("redis://127.0.0.1/").unwrap();
+    let client = redis::Client::open("redis://redis:6379").unwrap();
     let con = client
         .get_multiplexed_async_connection_with_timeouts(
             std::time::Duration::from_secs(2),

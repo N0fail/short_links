@@ -2,5 +2,4 @@ FROM rust:1.79
 COPY src/ /app/src
 COPY Cargo.toml /app
 WORKDIR /app
-RUN cargo build --release
-ENTRYPOINT /app/target/release/short_links
+CMD ["cargo", "run", "--release"]
