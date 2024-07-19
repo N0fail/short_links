@@ -50,7 +50,7 @@ async fn short_link(
             if !URL_REGEX.is_match(&url) {
                 return Ok(Response::builder()
                     .status(StatusCode::BAD_REQUEST)
-                    .body(full("Provided string is not a valid url"))
+                    .body(full(format!("Provided string is not a valid url: {url}")))
                     .unwrap());
             }
 
