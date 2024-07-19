@@ -131,7 +131,7 @@ async fn main() {
         .unwrap();
 
     // Add socket listener
-    let listener = TcpListener::bind("127.0.0.1:3000").await.unwrap();
+    let listener = TcpListener::bind("127.0.0.1:80").await.unwrap();
 
     // create a new task for each connection
     loop {
