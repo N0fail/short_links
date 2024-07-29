@@ -3,8 +3,6 @@ name = "short_links"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 tokio = { version = "1.38.0", features = ["full"] }
 redis = { version = "0.25.4", features = ["tokio-comp"] }
@@ -16,6 +14,8 @@ rand = { version = "0.8.5" }
 rand_chacha = { version = "0.3.1" }
 regex = { version = "1.10.5" }
 lazy_static = { version = "1.5.0" }
+once_cell = { version = "1.19.0" }
+async-trait = { version = "0.1.81" }
 
 [[bin]]
 name = "short_links"
