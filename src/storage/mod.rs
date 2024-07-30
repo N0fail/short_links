@@ -6,5 +6,5 @@ pub mod redis;
 pub trait ShortLinkStorage: Send + Sync {
     async fn save(&self, key: &str, value: &str) -> Result<(), RedisError>;
     async fn load(&self, key: &str) -> Result<Option<String>, RedisError>;
-    async fn generate_key(&self) -> Result<String, RedisError>;
+    async fn get_seed(&self) -> Result<u64, RedisError>;
 }
